@@ -1,6 +1,14 @@
+"use client";
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+
+// react intersection observer to keep track of user's viewport 
 
 function LoadMore() {
+
+  const { ref, inView } = useInView();
+
   return (
     <>
       <section className="flex justify-center items-center w-full">
